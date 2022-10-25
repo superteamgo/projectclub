@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: rgba(1, 65, 160, 0.09);
+}
+
+.logoDiv{
+    padding: .5rem;
+}
+.logoDiv > img{
+    width: 350px;
+}
+.profileImage{
+    /* background-color: rgb(57, 128, 0); */
+    border-radius: 50%;
+    padding: .3rem;
+}
+.profileImage img{
+    width:2.3rem;
+}
+.navText{
+    /* background-color: rgb(143, 240, 185); */
+    color: royalblue;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    align-items: center;
+}
+
+.navProfile{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    cursor: default;
+    height: 3rem;
+    padding: .3rem;
+    border-radius: .3rem;
+    transition-duration: 200ms;
+}
+
+.navProfile:hover{
+    background-color: white;
+}
+
+.profileName{
+    font-size: .7rem;
+    position: relative;
+}
+
+.profileName > div{
+    position: absolute;
+    display: none;
+    padding-top: 1.8rem;
+}
+
+.profileName ul{
+    
+    background-color: rgba(0, 183, 255, 0.514);
+    color: white;
+    list-style-type: none;
+    font-size: 1.1rem;
+    padding: .3rem;
+    width: 10rem;
+    text-align: center;
+    
+}
+
+.profileName ul li{
+    margin: .2rem 0;
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+.profileName ul li:hover{
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+.list{
+    display: flex;
+    align-items: center;
+}
+
+.list:hover .profileName > div{
+    display: block;
+}
+.superClubList{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding:1rem;
+}
+
+.superClubDiv{
+    width:26rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.superClubDiv > img{
+    width:100%;
+}
+
+.superClubText{
+    padding: 1rem;
+}
+
+.superClubText h2{
+    margin-bottom: .5rem;
+}
+
+
+.eventTitle{
+    color: green;
+}
+.eventColor{
+    /* background: linear-gradient(to top left, #28b488, #7dd56f); */
+    padding-top: 1rem;
+    /* padding-bottom: 2rem; */
+}
+.eventIndex > h2{
+    color: rgb(0, 163, 95);
+    font-size: 2rem;
+    padding: .5rem;
+    margin-left:1rem;
+}
+.enentsDiv{
+    background-color: white;
+    border-radius: .5rem;
+    width:21rem;
+    position: relative;
+    /* transition-duration: 500ms; */
+    cursor: pointer;
+}
+
+/* .enentsDiv:hover{
+    transform: scale(1.03);
+} */
+
+.enentsDiv img{
+    border-radius: .5rem .5rem 0 0;
+    height:12rem;
+}
+.enentsDiv h2{
+    font-size: 1.1rem;
+}
+
+.eventTime{
+    position: absolute;
+    top:4%;
+    left: 3%;
+    background-color: rgba(255, 255, 255, 0.678);
+    color: rgb(56, 56, 56);
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+.eventMeta{
+    margin-top: 1rem;
+}
+
+
+.spanButn button{
+    font-size: 1rem;
+    padding: .3rem 1rem;
+    border: 2px solid transparent;
+    border-radius: .3rem;
+    color: white;
+    background-color: rgb(255, 136, 0);
+    margin-left: .5rem;
+}
+
+
+.viewButn button{
+    font-size: 1rem;
+    padding: .3rem 1rem;
+    border: 2px solid transparent;
+    border-radius: .3rem;
+    color: white;
+    margin-left: .5rem;
+    background-color: rgb(0, 179, 39);
+}
+
+.viewButn button:active{
+    background-color: transparent;
+    color: rgb(0, 179, 39);
+    border: 2px solid rgb(0, 179, 39);
+}
+
+
+.spanButn button:active{
+    background-color: transparent;
+    color: rgb(255, 136, 0);
+    border: 2px solid rgb(255, 136, 0);
+}
+
+.eventIndex{
+    display: flex;
+    /* background-color: seagreen; */
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.eventIndex button{
+    font-size: 1.1rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-right: .4rem;
+    border-radius: .3rem;
+    color: white;
+    border: 2px solid white;
+    margin-left: .5rem;
+    background-color: #4bae4f;
+    margin-right: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.eventIndex button:active{
+    border: 2px solid #4bae4f;
+}
+
+.eventIndex button img{
+    width:25px;
+}
+/* Master class  */
+.master{
+    background-color: white;
+    border-radius: .3rem;
+    width:30rem;
+    padding: 1.5rem;
+    z-index: 5;
+}
+
+.title {
+    color: #525252;
+    font-size: 24px;
+    text-transform: capitalize;
+    padding: .3rem 0;
+    margin-left: 1.3rem;
+}
+
+.studentForm{
+    margin-top: 1rem;
+}
+
+.dataInput{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width:90%;
+}
+.dataInput > input,.dataInput > select{
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: .3rem;
+    outline: none;
+    border: none;
+    padding: .3rem;
+    background-color: #fafafa;
+    margin: .3rem 0;
+    box-shadow:inset 0 1px 0px 0 rgba(0,0,0,.08);
+}
+
+.dataInput label{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #555;
+}
+
+.butnDiv{
+    width:50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: .5rem auto;
+}
+
+#doneButn{
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    padding: .3rem 3rem;
+    border-radius: .3rem;
+}
+
+#doneButn{
+    background-color: #3868cd;
+}
+
+#doneButn:active{
+    border: 2px solid transparent;
+
+}
+
+#eventimage::file-selector-button{
+    border: none;
+    padding: .3rem;
+    border-radius: .3rem;
+    color: rgb(58, 58, 58);
+}
+
+.alertMaster{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}

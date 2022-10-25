@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("./images/nature4orignal.jpg");
+    background-size: 100vw 100vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.master{
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    width:40rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 4rem auto;
+    padding-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.637);
+}
+.title {
+    color: green;
+    text-transform: capitalize;
+    text-align: center;
+    padding: .3rem 0;
+    border-radius: 1rem 1rem 0 0;
+}
+#dataForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.studentForm{
+    margin-top: 1.5rem;
+}
+.dataInput{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: .3rem auto;
+    width:90%;
+    /* background-color: lightyellow; */
+}
+.dataInput > input,.dataInput > select{
+    font-size: 1.2rem;
+    width: 20rem;
+    border-radius: .3rem;
+    border: 2px solid green;
+    outline: none;
+    padding: .3rem;
+    border-radius: .3rem;
+    background-color: transparent;
+    margin: .3rem 0;
+    resize: none;
+}
+.dataInput > select{
+    width: 20.8rem;
+}
+.dataInput input:focus,.dataInput select:focus{
+    border: 2px solid rgb(128, 247, 92);
+}
+.dataInput label{
+    font-size: 1.19rem;
+    text-transform: capitalize;
+    color: black;
+    margin-top: .5rem;
+    padding-left:1rem ;
+}
+
+.butnDiv{
+    width:50%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: .5rem auto;
+}
+
+#doneButn,#clearingButn{
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    padding: .3rem 3rem;
+    border-radius: .3rem;
+}
+
+#doneButn:active,#clearingButn:active{
+    border: 2px solid transparent;
+
+}
+
+input[type='radio'] {
+    accent-color: green;
+}
+
+#doneButn{
+    background-color: green;
+}
+
+#clearingButn{
+    background-color: #ff6000;
+}
+#displayMsg{
+    color: #ff6000;
+    text-align: center;
+}

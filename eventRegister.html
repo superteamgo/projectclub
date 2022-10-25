@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eventRegister.css">
+    <title>Event Register Form</title>
+</head>
+<body>
+    <div class="clubTitle">
+        <h2>ECO CLUB</h2>
+        <h3>Apple inc new event mac book pro</h3>
+    </div>
+    <main>
+        <div class="eventImage">
+            <img src="./images/winter.jpg" alt="eventImage">
+        </div>
+        <div class="eventFormMain">
+            <h2 class="formTitle">Event Registerion Form</h2>
+            <form action="#" method="post">
+            <div class="eventForm">
+                <div class="eventFormData">
+                    <!-- <label for="eventname">Event name</label> -->
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="eventFormData">
+                    <!-- <label for="eventname">Event name</label> -->
+                    <input type="number" name="regno" placeholder="register no" required>
+                </div>
+                <div class="eventFormData">
+                    <!-- <label for="department">department</label> -->
+                    <select name="gender" required>
+                        <option value="null" disabled selected>select gender</option>
+                        <option value="M">Male</option>
+                        <option value="F" >Female</option>
+                    </select>
+                </div>
+                <div class="eventFormData">
+                    <!-- <label for="eventname">Event name</label> -->
+                    <input type="number" name="phone" placeholder="phone no" required>
+                </div>
+                <div class="eventFormData">
+                    <!-- <label for="department">department</label> -->
+                    <select name="department" required>
+                        <option value="null" disabled selected>select department</option>
+                        <option value="CSE">CSE</option>
+                        <option value="IT" >IT</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">MECH</option>
+                    </select>
+                </div>
+                <div class="eventFormData">
+                    <!-- <label for="department">year</label> -->
+                    <select name="year" id="year" required>
+                        <option value="null" disabled selected>select year</option>
+                        <option value="1">I</option>
+                        <option value="2" >II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                    </select>
+                </div>
+                <div class="butnDiv">
+                    <input id="doneButn" onclick="toggleAlert()" type="submit" value="Submit" >
+                </div>
+            </div>
+        </form>
+        </div>
+    </main>
+</body>
+</html>

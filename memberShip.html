@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./memberShip.css">
+    <title>Join in nec club</title>
+</head>
+<body>
+    <div class="master">
+        <h2 class="title"> student registration form</h2>
+        <form id="dataForm" action="http://localhost:8000/superclub/studentdata" method="POST" onsubmit="return validation()">
+        <div class="studentForm">
+            <div class="dataInput">
+                <label for="studentname">student name</label>
+                <input type="text" id="studentname" name="studentname">
+            </div>
+            <div class="dataInput">
+                <label for="regno">reqister number </label>
+                <input type="number"  id="regno" name="regno">
+            </div>
+            <div class="dataInput selectInput">
+                <label for="student">gender </label>
+                <div>
+                <span> 
+                    <label for="male">male</label>
+                    <input type="radio"  id="male" checked name="gender" value="M">
+                </span>
+                <span> 
+                    <label for="female">female</label>
+                    <input type="radio"  id="female" name="gender" value="G">
+                </span>
+                </div>
+            </div>
+            <div class="dataInput">
+                <label for="year">student year </label>
+                <select name="stdYear" id="year">
+                    <option value="null" selected>select year</option>
+                    <option value="1">I year</option>
+                    <option value="2" >II year</option>
+                    <option value="3">III year</option>
+                    <option value="4">IV year</option>
+                </select>
+            </div>
+            <div class="dataInput">
+                <label for="student">student department</label>
+                <select name="department" id="studentdepartment">
+                    <option value="null" selected>Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT" >IT</option>
+                    <option value="ECE">ECE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="EEE">EEE</option>
+                </select>
+            </div>
+            <div class="dataInput">
+                <label for="clubname">club name</label>
+                <select name="clubName" id="clubname">
+                    <option value="null" selected>select club</option>
+                    <option value="NSS club">NSS club</option>
+                    <option value="CSI club" >CSI club</option>
+                    <option value="NCC club">NCC club</option>
+                    <option value="ECO club">ECO club</option>
+                    <option value="SCIENCE club">SCIENCE club</option>
+                </select>
+            </div>
+            <div class="dataInput">
+                <label for="brithDay">data of brith</label>
+                <input type="date" id="brithDay" name="brithDay">
+            </div>
+            <div class="dataInput">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="dataInput terms">
+                <label for="">accept terms and<br> conditions</label>
+                <span>
+                    <input type="checkbox" id="terms1" name="terms" value="yes1">
+                    <label for="terms1"> Terms of Service</label><br>
+                    <input type="checkbox" id="terms2" name="terms" value="yes2">
+                    <label for="terms2"> Privacy Policy</label><br>
+                </span>
+            </div>
+        </div>
+        <h4 id="displayMsg"> </h4>
+        <div class="butnDiv">
+            <input id="doneButn" type="submit" value="Done" >
+            <!-- <input id="clearingButn" type="reset" value="Clear"> -->
+        </div>
+    </form>
+</div>
+<script>
+const log = (message) => {
+    document.getElementById("displayMsg").innerText = message
+}
+const validation = ()=>{
+    const checkboxes = document.getElementsByName("terms")
+    const name = document.getElementById("studentname")
+    const email = document.getElementById("email")
+    const regno = document.getElementById("regno")
+    const year = document.getElementsByName("stdYear")[0]
+    const department = document.getElementsByName("department")[0]
+    const clubName = document.getElementsByName("clubName")[0]
+    const brithDay = document.getElementById("brithDay")
+    
+    if(name.value.trim === ""){
+        log("Please enter your name")
+        return false 
+    } 
+    else if(/^[a-zA-Z\s]+$/.test(name.value) === false){
+        log("Please enter a valid name")
+        return false
+    }
+    else if(name.value.trim().length <=2 ){
+        log("name must contains more the 2 characters")
+        return false
+    }
+
+    if(regno.value === ""){
+        log("Please enter your register number");
+        return false
+    }
+    else if(/^\d{7}$/.test(regno.value) === false) {
+        log("Please enter a valid 7 digit register number")
+        return false
+    }
+    if ( year.options[year.selectedIndex].value ==="null"){
+        log("Select the student year")
+        return false
+    }
+    if ( department.options[department.selectedIndex].value ==="null"){
+        log("Select your department name")
+        return false
+    } 
+    if ( clubName.options[clubName.selectedIndex].value ==="null"){  
+        log("Select the club your want to join")
+        return false
+    }
+    if(brithDay.value === ""){
+        log("Select Your Date of Brith")
+        return false
+    }
+    if(email.value.trim === "") {
+        log("Please enter your email address");
+        return false
+    }
+    else if(/^\S+@\S+\.\S+$/.test(email.value) === false){
+        log("Please enter a valid email address");
+        return false
+    } 
+
+    const terms = []
+    for(var i=0; i < checkboxes.length; i++) if(checkboxes[i].checked) terms.push(checkboxes[i].value);
+    if (terms.length === 0) {
+        log("accept the any one terms and contitions")
+        return false
+    }
+    log("")
+    return true
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="loginStyles.css">
+</head>
+<body>
+    <header>
+        <div class="logoDiv">
+            <a href="/superclub" style="text-decoration: none;color: white;">
+            <img src="https://nec.edu.in/wp-content/themes/vajra/assets/images/logo_2.svg" alt="nec logo">
+            </a>
+            <h2 class="webTitle"></h2>
+        </div>
+        <ul>
+            <li> home<hr></li>
+            <li> events<hr></li>
+            <li class="list"> 
+                clubs<hr>
+            <ul class="sublist">
+                <li><a href="#1">ECO club</a></li>
+                <li><a href="#2">CSI club</a></li>
+                <li><a href="#3">NCC club</a></li>
+                <li><a href="#4">SCIENCE club</a></li>
+                <li><a href="#5">NSS club</a></li>
+            </ul>
+            </li>
+            <li>
+                <span class="joinButn"><a href="./memberShip.html">Register</a></span>
+                <span><a href="./loginPage.html" style="text-decoration: none;color: white;">Login</a></span>
+            </li>
+        </ul>
+    </header>
+    <div class="master">
+        <h2 class="masterTitle">Login page</h2>
+        <form action="http://localhost:8000/superclub/clubServer" method="POST">
+        <div class="loginDiv">
+            <div class="inputDiv">
+                <input type="text" id="username" name="username" required>
+                <label for="username">username</label>
+            </div>
+            <div class="inputDiv">
+                <input type="text" id="password" name="password" required>
+                <label for="password">password</label>
+            </div>
+            <button class="loginButn">Login</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

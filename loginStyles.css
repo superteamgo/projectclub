@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header{
+    background-color: rgb(255, 255, 255);
+    padding:.3rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.logoDiv img{
+    width:250px;
+    object-fit: cover;
+    margin-top: .3rem;
+}
+header ul{
+    list-style-type:none ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.1rem;
+    color: rgb(46, 46, 46);
+    text-transform: capitalize;
+    cursor: default;
+}
+
+header > ul > li > hr{
+    width: 0;
+    transition-duration: 500ms;
+    color: white;
+    border: 2px solid transparent;
+}
+header > ul > li:hover  hr{
+    width: 100%;
+    border: 2px solid rgb(124, 124, 124);
+}
+
+header > ul > li > span:nth-of-type(2){
+    color: white;
+    background-color: rgb(6, 185, 6);
+    font-size: 1.2rem;
+    padding: .4rem .8rem;
+    border-radius: .3rem;
+    border: 2px solid white;
+}
+
+header > ul > li > span:nth-of-type(2):hover{
+    border: 2px solid transparent;
+}
+
+.list{
+    position: relative;
+}
+
+
+.sublist{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top:2.44rem;
+    z-index: 5;
+    width:10rem;
+    color: rgb(32, 32, 32);
+    padding: .3rem;
+    border-top: 3px solid green;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: .3rem;
+    visibility: hidden;
+    transition-duration:300ms;
+}
+
+li:hover  ul{
+   visibility: visible;
+}
+
+.sublist li{
+    width:100%;
+    padding: .2rem;
+    text-align: center;
+}
+
+.sublist li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sublist li a:active{
+    color:orange;
+}
+
+
+.sublist li:hover{
+    background-color: whitesmoke;
+}
+
+.joinButn{
+    background-color: transparent;
+    margin-right: 1rem;
+}
+
+.joinButn a{
+    text-decoration: none;
+    color: seagreen;
+}
+
+body{
+    /* background-color: pink; */
+    background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    /* background: url("./assets/nec_home.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.master{
+    position:absolute;
+    left:35vw;
+    top:30vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width:25rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: .3rem;
+}
+
+.masterTitle{
+    color: green;
+    text-align: center;
+}
+
+.loginDiv{
+    /* background-color: green; */
+    margin: 1rem;
+    position: relative;
+}
+.inputDiv{
+    position: relative;
+    margin: 1rem 0;
+    
+}
+.inputDiv input{
+    font-size: 1.2rem;
+    padding: .5rem;
+    outline: none;
+    border: 2px solid green;
+    width:100%;
+    border-radius: .3rem;
+}
+
+.inputDiv label{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    position: absolute;
+    top: .4rem;
+    left: 1rem;
+    transition-duration: 300ms;
+    background-color: white;
+}
+
+.inputDiv input:valid + label,.inputDiv input:focus + label{
+    top: -11px;
+    font-size: 1rem;
+}
+
+.loginButn{
+    font-size: 1.2rem;
+    color: white;
+    border-radius: .3rem;
+    padding: .3rem 1.5rem;
+    border: 2px solid white;
+    outline: none;
+    background-color: rgb(0, 158, 0);
+}
+
+.loginButn:active{
+    border: 2px solid green;
+}
+
+.loginFooter{
+    padding: .5rem;
+    color: black;
+    text-align: center;
+}
+.Line{
+    background-color: rgb(201, 196, 196);
+    padding: .05rem;
+    width:35vw;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+}
+
+.loginFooter a{
+    color: green;
+    font-size: 1.1rem;
+    /* text-decoration: none; */
+}
+
+footer{
+    background-color: rgb(24, 240, 53);
+    position: absolute;
+    bottom: 0;
+    width:100vw;
+    padding: 1rem 5rem;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}

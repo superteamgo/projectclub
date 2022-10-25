@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Admin Dashboard</title>
+</head>
+<body onkeydown="alertEsc(event)">
+    <div class="navbar"> 
+        <div class="navbarOptions">
+                <img src="https://nec.edu.in/wp-content/themes/vajra/assets/images/logo_2.svg" alt="">
+            <h3>Login as Admin</h3>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sideTop">
+            <h2>Dashboard</h2>
+        </div>
+    </div>
+    <div class="root">
+        <div class="index">
+            <div class="classUser">
+                <div class="userIndex">
+                    <h2>Admin Profile</h2>
+                    <button id="createNew">Add Profile</button>
+                </div>
+                <div class="userContent">
+                    <table class="userTable">
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Email</th>
+                            <th>Edit</th>
+                            <th>Trash</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Ram Kumar</td>
+                            <td>1234</td>
+                            <td>ramkumar369@gmail.com</td>
+                            <td><button class="userButn editButn">Edit</button></td>
+                            <td><button class="userButn trashButn">Trash</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Peter England</td>
+                            <td>pieCake</td>
+                            <td>peterparker@gmail.com</td>
+                            <td><button class="userButn editButn">Edit</button></td>
+                            <td><button class="userButn trashButn">Trash</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>vijay</td>
+                            <td>superman</td>
+                            <td>vijaykumar@gmail.com</td>
+                            <td><button class="userButn editButn">Edit</button></td>
+                            <td><button class="userButn trashButn">Trash</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="alertMain" style="display:none;">
+            <div class="alertBox">
+                <form id="userform" action="http://localhost:8000/superclub/newuser" method="post">
+                <div class="login">
+                    <div class="login_header">
+                        <h2 class="loginTitle">Create New User</h2>
+                    </div>
+                    <div class="loginForum">
+                    <div class="input">
+                        <input type="text" id="username" name="username" required>
+                        <label for="username">username</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" id="email" name="email" required>
+                        <label for="email">email</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" id="password" name="password" required>
+                        <label for="passwd">password</label>
+                    </div>
+                    <button class="loginButn" type="submit" onclick="toggleAlert()">Done</button>
+                    </div>
+                    <input type="hidden" id="uid" name="uid" value="1">
+                    <input type="hidden" id="action" name="action" value="new">
+                </div>
+            </form>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

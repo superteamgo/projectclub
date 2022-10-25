@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+main{
+    width:62rem;
+    margin: 5rem auto;
+    display: grid;
+    border-radius: .3rem;
+    grid-template-columns: 1.5fr 1.5fr;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.eventImage{
+    height:32rem;
+}
+.eventImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: .3rem 0 0 .3rem;
+}
+
+.eventFormMain{
+    padding: 1rem;
+}
+
+.eventForm{
+    /* background-color: seagreen; */
+    padding: .5rem;
+}
+
+.formTitle{
+    color: #0cb6ef;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    padding: .3rem 0;
+    margin-left: 1.3rem;
+    padding-left: 1rem;
+}
+
+.eventFormData{
+    /* display: flex;
+    flex-direction: column; */
+    margin: .5rem auto;
+    width:90%;
+}
+.eventFormData > input,.eventFormData > select{
+    font-size: 1.2rem;
+    width: 100%;
+    /* border-radius: .3rem; */
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid rgb(61, 61, 61);
+    padding: .3rem;
+    background-color: transparent;
+    margin: .3rem 0;
+    /* box-shadow:inset 0 1px 0px 0 rgba(0,0,0,.08); */
+}
+.eventFormData > input:focus,.eventFormData > select:focus{
+    border-bottom: 2px solid rgb(96, 163, 245);
+}
+.eventFormData label{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+}
+
+.butnDiv{
+    /* width:90%; */
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: .5rem auto;
+}
+
+#doneButn{
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    padding: .5rem 2rem;
+    border-radius: .3rem;
+}
+
+#doneButn{
+    background-color: #1e97ed;
+}
+
+#doneButn:active{
+    border: 2px solid transparent;
+
+}
+
+.clubTitle{
+    padding: .8rem;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    align-items: center;
+    gap:35%;
+}
+
+.clubTitle > h2:nth-child(1){
+    color: rgb(255, 255, 255);
+}
+
+.clubTitle > h3{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.clubTitle{
+    padding: .8rem;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    align-items: center;
+    gap:35%;
+}
